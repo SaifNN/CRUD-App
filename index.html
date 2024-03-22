@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="w-75 m-auto mt-5 ">
+        <label for="productname">Productname :</label>
+        <input type="text" id="productname" class="form-control my-2">
+        <label for="price">Price :</label>
+        <input type="number" id="price" class="form-control my-2">
+        <label for="category">Category :</label>
+        <input type="text" id="category" class="form-control my-2">
+        <label for="count">Count :</label>
+        <input type="number" id="count" class="form-control my-2">
+        <label for="descripation">Descripation :</label>
+        <input type="text" id="descripation" class="form-control my-2">
+        <button class="btn btn-primary d-block mb-2 Add" onclick="addproduct()">Add Product</button>
+        <label for="search">Search:</label>
+        <input type="text" id="search" class="form-control my-2" placeholder="Search By title"
+            onkeyup="searchproduct(this.value)">
+
+
+        <table class="table mt-5 table-primary text-center">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Productname</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Descripation</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
