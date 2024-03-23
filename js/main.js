@@ -93,19 +93,23 @@ function updateproduct(i) {
 
 }
 function searchproduct(value) {
+
+    console.log(value);
     let counts = ""
     for (i = 0; i < allproducts.length; i++) {
-        (allproducts[i].name.includes(value.toLowerCase()))
-        counts += `<tr>
-            <th scope="row">${i}</th>
-            <td>${allproducts[i].name}</td>
-            <td>${allproducts[i].price}</td>
-            <td>${allproducts[i].category}</td>
-            <td>${allproducts[i].count}</td>
-            <td>${allproducts[i].desc}</td>
-            <td><button class="btn btn-danger" onclick=" deleteProduct(${i})">Delete</button></td>
-            <td><button class="btn btn-warning" onclick="updateproduct(${i})">Update</button></td>
-        </tr>`
+        if (allproducts[i].name.includes(value.toLowerCase())) {
+                counts += `<tr>
+                <th scope="row">${i}</th>
+                <td>${allproducts[i].name}</td>
+                <td>${allproducts[i].price}</td>
+                <td>${allproducts[i].category}</td>
+                <td>${allproducts[i].count}</td>
+                <td>${allproducts[i].desc}</td>
+                <td><button class="btn btn-danger" onclick=" deleteProduct(${i})">Delete</button></td>
+                <td><button class="btn btn-warning" onclick="updateproduct(${i})">Update</button></td>
+            </tr>`
+
+        }
 
     }
     document.querySelector("tbody").innerHTML = counts
